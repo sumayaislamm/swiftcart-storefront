@@ -115,7 +115,8 @@
                     class="relative w-[170px] h-[180px] bg-white border border-gray-200 rounded-xl p-5 shadow-sm transition-all duration-300  hover:shadow-xl hover:-translate-y-2 hover:border-primary">
                     <div
                         class="absolute -top-6  bg-primary text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg">
-                        <i class="fa-solid fa-headphones"></i></div>
+                        <i class="fa-solid fa-headphones"></i>
+                    </div>
                     <h3 class="pt-[20px] font-bold text-lg"> 24/7 Support</h3>
                     <p class="text-sm tracking-tight mt-[20px]">Our support team is available around the clock to assist
                         you.</p>
@@ -143,13 +144,87 @@
         </section>
 
         <!-- Products Show Section  -->
-        <section class=" w-full py-16">
+        <section id="product-section" class="w-full py-16">
             <h1 class="text-4xl pt-[20px] text-center">Tranding Now</h1>
+            <div class=" w-[330px] flex flex-col justify-start items-start gap-5 mx-auto border border-gray-200 rounded-xl shadow-sm">
+                <img class="border border-gray-200 rounded-xl h-[300px] w-[330px]" src="./Assets/t-shirt.jpg" alt="">
+                <div>
+                    <button>Catagory</button>
+                    <p>
+                        <i class="fa-regular fa-star"></i>
+                        3.9 (120 reviews)
+                    </p>
+                    <p>
+                        Name of the product
+                    </p>
+                    <p>
+                        price
+                    </p>
+                    <div>
+                        <button><i class="fa-solid fa-eye"></i> Details</button>
+                        <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                </div>
 
+
+            </div>
         </section>
-        <footer>
+        <!-- Newsletter Section -->
+        <section class="bg-gray-100 py-12">
+            <div class="max-w-3xl mx-auto text-center px-4">
+                <h2 class="text-3xl font-bold mb-4">Subscribe to our Newsletter</h2>
+                <p class="text-gray-600 mb-6">Get the latest updates, news, and offers directly in your inbox.</p>
+                <form class="flex flex-col sm:flex-row justify-center gap-3">
+                    <input type="email" placeholder="Enter your email"
+                        class="px-4 py-3 w-full sm:w-auto sm:flex-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        required />
+                    <button type="submit"
+                        class="bg-primary text-white px-6 py-3 rounded-md hover:bg-primary-dark transition">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </section>
 
+        <!-- Footer Section -->
+        <footer class="bg-gray-900 text-gray-300 py-8">
+            <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-bold mb-4 text-white">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div>
+                    <h3 class="font-bold mb-4 text-white">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com" class="hover:text-white transition"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com" class="hover:text-white transition"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="https://instagram.com" class="hover:text-white transition"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com" class="hover:text-white transition"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact / Copyright -->
+                <div>
+                    <h3 class="font-bold mb-4 text-white">Contact</h3>
+                    <p class="text-gray-400 mb-2">email@example.com</p>
+                    <p class="text-gray-400 mb-2">+1 234 567 890</p>
+                    <p class="text-gray-500 mt-4 text-sm">&copy; 2026 Your Company. All rights reserved.</p>
+                </div>
+            </div>
         </footer>
+
 
 
     </main>
