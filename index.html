@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SwiftCart</title>
+    <!-- Daisy and Tailwind  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+
+
+</head>
+
+<body>
+    <nav>
+        <div
+            class="navbar bg-base-100 shadow-sm w-full lg:w-full px-[30px] lg:px-[130px]  flex items-center justify-between py-4">
+            <div class="navbar-start">
+                <!-- Mobile Dropdown -->
+                <div class="dropdown hover:scale-110 transition-all lg:hidden  px-1 font-bold cursor-pointer ">
+                    <div tabindex="0" class="cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="-1"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>Home</a></li>
+                        <li><a>Products</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Logo -->
+                <a href="index.html"
+                    class="ml-[150px] lg:mx-0 hover:scale-110 transition-all flex items-center justify-center">
+                    <img class="h-12 w-12 cursor-pointer" src="./Assets/logo.png" alt="">
+                </a>
+
+            </div>
+
+
+            <div class="navbar-center hidden lg:flex items-center justify-center w-30">
+                <ul class="menu menu-horizontal px-1 font-bold">
+                    <li>
+                        <a href="index.html"
+                            class="cursor-pointer hover:text-primary bg-transparent hover:bg-transparent hover:scale-110 transition-all ">Home</a>
+                    </li>
+                    <li>
+                        <a href="product.html"
+                            class="cursor-pointer hover:text-primary bg-transparent hover:bg-transparent hover:scale-110 transition-all">Products</a>
+                    </li>
+                    <li>
+                        <a href="about.html"
+                            class="cursor-pointer hover:text-primary bg-transparent hover:bg-transparent hover:scale-110 transition-all">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html"
+                            class="cursor-pointer hover:text-primary bg-transparent hover:bg-transparent hover:scale-110 transition-all">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a href="cart.html"
+                    class="px-1 font-bold cursor-pointer hover:text-primary hover:scale-110 transition-all flex items-center">
+                    <p> <i class="fas fa-shopping-cart text-xl"></i> Carts</p>
+                    <!-- <span id="cart-count" class="ml-2 badge badge-primary">0</span> -->
+                </a>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
