@@ -8,6 +8,8 @@
     <!-- Daisy and Tailwind  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Poppins  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
@@ -15,7 +17,7 @@
 
 </head>
 
-<body>
+<body class="font-[Poppins]">
     <nav>
         <div
             class="navbar bg-base-100 shadow-sm w-full lg:w-full px-[30px] lg:px-[130px]  flex items-center justify-between py-4">
@@ -47,7 +49,7 @@
 
 
             <div class="navbar-center hidden lg:flex items-center justify-center w-30">
-                <ul class="menu menu-horizontal px-1 font-bold">
+                <ul class="menu menu-horizontal px-1 ">
                     <li>
                         <a href="index.html"
                             class="cursor-pointer hover:text-primary bg-transparent hover:bg-transparent hover:scale-110 transition-all ">Home</a>
@@ -77,16 +79,78 @@
     </nav>
     <main>
         <!-- Banner section -->
-        <section class="flex flex-col items-start justify-center text-left py-20 px-8 bg-cover bg-center" 
-         style="
+        <section class="flex flex-col items-start justify-center text-left py-20 px-8 bg-cover bg-center" style="
          background-image: url('./Assets/banner-image.png');
          height: 600px;
          width: 100%;
          ">
-            <h1 class="text-4xl text-black font-bold mb-4">Best Collection For You</h1>
-            <p class="text-lg text-black mb-6 max-w-lg">Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at swiftCart.</p>
-             <a href="product.html" class="btn btn-primary hover:scale-110 transition-all text-white">Shop Now</a>
+            <div class="mx-[100px]">
+                <h1 class="text-4xl text-black font-bold mb-4">Best Collection For You</h1>
+                <p class="text-lg text-black mb-6 max-w-lg">Discover the latest trends in fashion, electronics, and
+                    more.
+                    Shop with confidence and style at swiftCart.</p>
+                <a href="product.html" class="btn btn-primary hover:scale-110 transition-all text-white">Shop Now</a>
+            </div>
         </section>
+
+        <!-- Why choose Us section  -->
+        <section class="bg-gray-300 w-full py-16 flex flex-col items-center justify-center gap-5 lg:gap-10">
+            <div class="flex flex-col items-center justify-center gap-10">
+                <h1 class="text-4xl bold pt-[20px] "> <span class="text-primary">Why</span> Choose Us</h1>
+                <p class="text-black mx-5 lg:mx-0 tracking-tight">We provide the best shopping experience with top-notch
+                    services.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-20 gap-6 px-5 lg:px-[100px]">
+                <div
+                    class="relative w-[170px] h-[180px] bg-white border border-gray-200 rounded-xl p-5 shadow-sm transition-all duration-300  hover:shadow-xl hover:-translate-y-2 hover:border-primary">
+                    <div
+                        class="absolute -top-6 left-6 bg-primary text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg">
+                        <i class="fa-solid fa-truck-moving"></i>
+                    </div>
+                    <h3 class="pt-[20px] font-bold text-lg"> Fast Delivary</h3>
+                    <p class="text-sm tracking-tight mt-[20px]">Get your orders delivered to your doorstep quickly and
+                        efficiently.</p>
+                </div>
+                <div
+                    class="relative w-[170px] h-[180px] bg-white border border-gray-200 rounded-xl p-5 shadow-sm transition-all duration-300  hover:shadow-xl hover:-translate-y-2 hover:border-primary">
+                    <div
+                        class="absolute -top-6  bg-primary text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg">
+                        <i class="fa-solid fa-headphones"></i></div>
+                    <h3 class="pt-[20px] font-bold text-lg"> 24/7 Support</h3>
+                    <p class="text-sm tracking-tight mt-[20px]">Our support team is available around the clock to assist
+                        you.</p>
+                </div>
+                <div
+                    class="relative w-[170px] h-[180px] bg-white border border-gray-200 rounded-xl p-5 shadow-sm transition-all duration-300  hover:shadow-xl hover:-translate-y-2 hover:border-primary">
+                    <div
+                        class="absolute -top-6 left-6 bg-primary text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+                    <h3 class="pt-[20px] font-bold text-lg">Secure Payment</h3>
+                    <p class="text-sm tracking-tight ">Experience secure transactions payment systems.</p>
+                </div>
+                <div
+                    class="relative w-[170px] h-[180px] bg-white border border-gray-200 rounded-xl p-5 shadow-sm transition-all duration-300  hover:shadow-xl hover:-translate-y-2 hover:border-primary">
+                    <div
+                        class="absolute -top-6 left-6 bg-primary text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+                    <h3 class="pt-[20px] font-bold text-lg">Easy Returns</h3>
+                    <p class="text-sm tracking-tight mt-[20px]">Return items easily within our hassle-free return
+                        policy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Show Section  -->
+        <section class=" w-full py-16">
+            <h1 class="text-4xl pt-[20px] text-center">Tranding Now</h1>
+
+        </section>
+        <footer>
+
+        </footer>
+
 
     </main>
 </body>
