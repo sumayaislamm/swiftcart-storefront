@@ -13,11 +13,18 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-
+    <link rel="stylesheet" href="style.css">
 
 </head>
+<!-- Toast Message -->
+<div id="toast"
+    class="fixed bottom-5 right-5 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden transition-opacity duration-300">
+    Item added to cart!
+</div>
 
 <body class="font-[Poppins]">
+
+
     <nav>
         <div
             class="navbar bg-base-100 shadow-sm w-full lg:w-full px-[30px] lg:px-[130px]  flex items-center justify-between py-4">
@@ -33,10 +40,10 @@
                     </div>
                     <ul tabindex="-1"
                         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Home</a></li>
-                        <li><a>Products</a></li>
-                        <li><a>About</a></li>
-                        <li><a>Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <!-- Logo -->
@@ -46,7 +53,6 @@
                 </a>
 
             </div>
-
 
             <div class="navbar-center hidden lg:flex items-center justify-center w-30">
                 <ul class="menu menu-horizontal px-1 ">
@@ -144,42 +150,42 @@
         </section>
 
         <!-- Products Show Section  -->
-        <section id="product-section" class="w-full py-16">
-            <h1 class="text-4xl pt-[20px] text-center">Tranding Now</h1>
-            <div class=" w-[330px] flex flex-col justify-start items-start gap-5 mx-auto border border-gray-200 rounded-xl shadow-sm">
-                <img class="border border-gray-200 rounded-xl h-[300px] w-[330px]" src="./Assets/t-shirt.jpg" alt="">
-                <div>
-                    <button>Catagory</button>
-                    <p>
-                        <i class="fa-regular fa-star"></i>
-                        3.9 (120 reviews)
-                    </p>
-                    <p>
-                        Name of the product
-                    </p>
-                    <p>
-                        price
-                    </p>
-                    <div>
-                        <button><i class="fa-solid fa-eye"></i> Details</button>
-                        <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-                    </div>
-                </div>
+        <section class="w-full pb-16">
+            <h1 class="text-4xl py-[20px] text-center bg-white font-bold">Trending <span class="text-primary">Now</span>
+            </h1>
 
-
+            <div id="product-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:mx-[180px]">
             </div>
         </section>
-        <!-- Newsletter Section -->
+        <!-- Modal  -->
+        <section>
+            <!-- Modal -->
+            <div id="product-modal"
+                class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+                <div class="bg-white p-6 rounded-xl w-[400px] max-w-full relative">
+                    <button id="modal-close" class="absolute top-2 right-2 text-gray-500 hover:text-black">✖</button>
+                    <img id="modal-image" class="h-[200px] w-full object-contain rounded-xl mb-4">
+                    <h2 id="modal-title" class="font-bold text-lg mb-2"></h2>
+                    <p id="modal-category" class="text-sm text-gray-500 mb-2"></p>
+                    <p id="modal-price" class="text-sm font-semibold mb-2"></p>
+                    <p id="modal-rating" class="text-yellow-600 mb-2"></p>
+                    <p id="modal-description" class="text-sm"></p>
+                </div>
+            </div>
+        </section>
+        <!--   Newsletter Section -->
         <section class="bg-gray-100 py-12">
             <div class="max-w-3xl mx-auto text-center px-4">
                 <h2 class="text-3xl font-bold mb-4">Subscribe to our Newsletter</h2>
                 <p class="text-gray-600 mb-6">Get the latest updates, news, and offers directly in your inbox.</p>
                 <form class="flex flex-col sm:flex-row justify-center gap-3">
                     <input type="email" placeholder="Enter your email"
-                        class="px-4 py-3 w-full sm:w-auto sm:flex-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                        required />
+                        class="w-full sm:w-auto sm:flex-1 border border-gray-300 px-4 py-3  rounded-md" required />
+
+
+
                     <button type="submit"
-                        class="bg-primary text-white px-6 py-3 rounded-md hover:bg-primary-dark transition">
+                        class="rounded-md bg-primary px-6 py-3 text-white  hover:bg-primary-dark transition">
                         Subscribe
                     </button>
                 </form>
@@ -187,22 +193,24 @@
         </section>
 
         <!-- Footer Section -->
-        <footer class="bg-gray-900 text-gray-300 py-8">
-            <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-8">
-                <!-- Quick Links -->
+        <footer class="py-8 bg-gray-900 text-gray-300">
+            <div class="mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-8">
+
                 <div>
-                    <h3 class="font-bold mb-4 text-white">Quick Links</h3>
+                    <h3 class="text-white font-bold mb-4 ">Quick Links</h3>
+
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition">Home</a></li>
-                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition">Services</a></li>
-                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
 
-                <!-- Social Links -->
+
+
                 <div>
-                    <h3 class="font-bold mb-4 text-white">Follow Us</h3>
+                    <h3 class="mb-4 text-white font-bold ">Follow Us</h3>
                     <div class="flex space-x-4">
                         <a href="https://www.facebook.com" class="hover:text-white transition"><i
                                 class="fa-brands fa-facebook"></i></a>
@@ -215,12 +223,13 @@
                     </div>
                 </div>
 
-                <!-- Contact / Copyright -->
+
+
                 <div>
                     <h3 class="font-bold mb-4 text-white">Contact</h3>
-                    <p class="text-gray-400 mb-2">email@example.com</p>
+                    <p class="text-gray-400 mb-2">Swiftcode@yahoo.com</p>
                     <p class="text-gray-400 mb-2">+1 234 567 890</p>
-                    <p class="text-gray-500 mt-4 text-sm">&copy; 2026 Your Company. All rights reserved.</p>
+                    <p class="text-gray-500 mt-4 text-sm">&copy; 2026 SwiftCode. All rights reserved.</p>
                 </div>
             </div>
         </footer>
@@ -228,6 +237,7 @@
 
 
     </main>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
