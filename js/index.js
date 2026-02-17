@@ -49,8 +49,7 @@ fetch(url)
                     cart.push(product);
                     alert("Item added to cart!");
                 }
-                else {
-                    alert("Item already in cart!");
+                else {                    alert("Item already in cart!");
                 }
                 updateCartCount();
             });
@@ -70,19 +69,21 @@ const categoriesUrl = "https://fakestoreapi.com/products/categories";
 fetch(categoriesUrl)
     .then(res => res.json())
     .then(categories => {
-       btn.addEventListener('click', () => {
-    // সব button এর active style remove
-    document.querySelectorAll('.category-btn').forEach(button => {
-        button.classList.remove('bg-blue-600', 'text-white');
-        button.classList.add('bg-blue-100', 'text-blue-700');
-    });
+        categories.forEach(category => {
+            const btn = document.createElement('button');
+            btn.value = category;
+            btn.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+            btn.className = "category-btn text-blue-700 px-3 py-1 bg-blue-100  rounded-full hover:bg-blue-200 text-sm transition";
+            btn.dataset.category = category;
+            console.log(btn);
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.category-btn').forEach(button => button.classList.remove('active'));
+                btn.classList.add('active');
 
-    // clicked button এ active style add
-    btn.classList.remove('bg-blue-100', 'text-blue-700');
-    btn.classList.add('bg-blue-600', 'text-white');
-
-    fetchProducts(category);
-})
+                fetchProducts(category);
+            })
+            categoriesSelect.appendChild(btn);
+        });
         //   auto select first category
         if (categories.length > 0) fetchProducts(categories[0]);
     });
@@ -105,8 +106,8 @@ function renderProducts(products) {
                     <img class="h-[300px] w-full object-contain rounded-xl " src="${product.image}"
                         alt="${product.title}">
                      <div class="flex justify-between items-center w-full text-sm my-2">
-                   <span class="px-2 bg-blue-100 text-blue-600 rounded-full">${product.category}</span>
-          <span class="text-yellow-700 bg-yellow-100  px-2 rounded-full text-xs font-medium">
+          <span class="px-2 bg-blue-100 text-blue-600 rounded-full">${product.category}</span>
+          <span class="bg-yellow-100 text-yellow-700 px-2 rounded-full text-xs font-medium">
             ⭐ ${product.rating.rate} (${product.rating.count})
           </span>
         </div>
